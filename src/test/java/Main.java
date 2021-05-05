@@ -47,7 +47,7 @@ public class Main {
 
         //List of Cars
         List<Car> cars = new ArrayList<>();
-        Car car1 = new Car(toyota1, true, market3, "standard", Arrays.asList(dimBelow1, dimBelow5, dimAbove5));
+
         cars.add(new Car(toyota1, true, market3, "standard", Arrays.asList(dimBelow1, dimBelow5, dimAbove5)));
         cars.add(new Car(toyota1, false, market1, "standard", Arrays.asList(dimBelow1, dimBelow4, dimAbove5)));
         cars.add(new Car(toyota2, true, market3, "standard", Arrays.asList(dimAbove1, dimBelow3, dimBelow5)));

@@ -44,7 +44,7 @@ public class Car {
                                 System.out.println(count + ". Car - " +
                                         "Producer: " + c.getProducer().getModel() +
                                         ". TrankCapacity: " + d.getTrankCapacity() +
-                                        ". Country:" + country.getCountryName() + "-" + country.getCountrySign());
+                                        ". Country: " + country.getCountryName() + "-" + country.getCountrySign());
                             }
                         }
                     }
