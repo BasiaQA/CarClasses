@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Car {
@@ -32,24 +33,28 @@ public class Car {
         return dimensions;
     }
 
-    public static void getCarsBMW(List<Car> cars) {
+    public static List<Car> getCarsBMW(List<Car> cars, List<Car>carsBMW) {
         int count = 0;
-        for (Car c : cars) {
-            if (c.isAutomaticGear()) {
-                if (c.getProducer().getModel().equals("BMW")) {
-                    for (Dimension d : c.getDimensions()) {
-                        if (d.getTrankCapacity() > 300) {
-                            for (Country country : c.getMarket().getCountries()) {
-                                count++;
-                                System.out.println(count + ". Car - " +
-                                        "Producer: " + c.getProducer().getModel() +
-                                        ". TrankCapacity: " + d.getTrankCapacity() +
-                                        ". Country: " + country.getCountryName() + "-" + country.getCountrySign());
-                            }
+        if (cars.size() > 0) {
+            for (Car c : cars) {
+                for (Dimension d : c.getDimensions()) {
+                    if (c.isAutomaticGear() &&
+                            c.getProducer().getModel().equals("BMW") &&
+                            d.getTrankCapacity() > 300) {
+                        carsBMW.add(c);
+                        for (Country country : c.getMarket().getCountries()) {
+                            count++;
+                            System.out.println(count + ". Car - " +
+                                    "Producer: " + c.getProducer().getModel() +
+                                    ". TankCapacity: " + d.getTrankCapacity() +
+                                    ". Country: " + country.getCountryName() + "-" + country.getCountrySign());
                         }
                     }
                 }
             }
+        } else {
+            System.out.println("The list of cars you are searching is empty");
         }
+        return carsBMW;
     }
 }

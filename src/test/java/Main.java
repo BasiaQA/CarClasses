@@ -64,6 +64,13 @@ public class Main {
         cars.add(new Car(bmw5, true, market5, "premium", Arrays.asList(dimBelow3, dimAbove1, dimBelow5)));//ok - 1TC*3kraje
         cars.add(new Car(bmw1, false, market4, "premium", Arrays.asList(dimAbove2, dimAbove4, dimAbove5)));//nie
 
-        Car.getCarsBMW(cars);
+        //List of suitable cars
+        List<Car> carsBMW = new ArrayList<>();
+
+        Car.getCarsBMW(cars, carsBMW);
+
+        if (carsBMW.isEmpty()) {
+            System.out.println("There are no cars suitable.");
+        }
     }
 }
