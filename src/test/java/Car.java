@@ -43,7 +43,7 @@ public class Car {
                                 count++;
                                 System.out.println(count + ". Car - " +
                                         "Producer: " + c.getProducer().getModel() +
-                                        ". TrankCapacity: " + d.getTrankCapacity() +
+                                        ". TankCapacity: " + d.getTrankCapacity() +
                                         ". Country: " + country.getCountryName() + "-" + country.getCountrySign());
                             }
                         }
