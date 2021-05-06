@@ -34,7 +34,6 @@ public class Car {
     }
 
     public static List<Car> getCarsBMW(List<Car> cars, List<Car>carsBMW) {
-        int count = 0;
         if (cars.size() > 0) {
             for (Car c : cars) {
                 for (Dimension d : c.getDimensions()) {
@@ -43,7 +42,6 @@ public class Car {
                             d.getTrankCapacity() > 300) {
                         carsBMW.add(c);
                         for (Country country : c.getMarket().getCountries()) {
-                            count++;
                             System.out.println(country.getCountryName() + "-" + country.getCountrySign());
                         }
                     }
