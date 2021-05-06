@@ -44,10 +44,7 @@ public class Car {
                         carsBMW.add(c);
                         for (Country country : c.getMarket().getCountries()) {
                             count++;
-                            System.out.println(count + ". Car - " +
-                                    "Producer: " + c.getProducer().getModel() +
-                                    ". TankCapacity: " + d.getTrankCapacity() +
-                                    ". Country: " + country.getCountryName() + "-" + country.getCountrySign());
+                            System.out.println(country.getCountryName() + "-" + country.getCountrySign());
                         }
                     }
                 }
